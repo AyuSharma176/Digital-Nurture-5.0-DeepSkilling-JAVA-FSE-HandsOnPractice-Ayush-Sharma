@@ -1,0 +1,21 @@
+### IntelliJ IDEA ###
+out/
+*.iml
+!.idea/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+
+### VS Code ###
+.vscode/
+
+### OS / generated ###
+.DS_Store
+outputPhoto/
