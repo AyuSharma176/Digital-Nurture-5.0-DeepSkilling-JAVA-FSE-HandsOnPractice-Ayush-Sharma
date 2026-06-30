@@ -1,22 +1,25 @@
 public class FactoryMethodDemo {
-
     public static void main(String[] args) {
+        DocumentFactory wordFactory = new WordDocumentFactory();
+        Document wordDoc = wordFactory.createDocument();
+        wordDoc.open();
+        wordDoc.save();
+        wordDoc.close();
 
-        DocumentFactory factory;
+        System.out.println();
 
-        // Word
-        factory = new WordDocumentFactory();
-        Document doc1 = factory.createDocument();
-        doc1.open();
+        DocumentFactory pdfFactory = new PdfDocumentFactory();
+        Document pdfDoc = pdfFactory.createDocument();
+        pdfDoc.open();
+        pdfDoc.save();
+        pdfDoc.close();
 
-        // PDF
-        factory = new PdfDocumentFactory();
-        Document doc2 = factory.createDocument();
-        doc2.open();
+        System.out.println();
 
-        // Excel
-        factory = new ExcelDocumentFactory();
-        Document doc3 = factory.createDocument();
-        doc3.open();
+        DocumentFactory excelFactory = new ExcelDocumentFactory();
+        Document excelDoc = excelFactory.createDocument();
+        excelDoc.open();
+        excelDoc.save();
+        excelDoc.close();
     }
 }
