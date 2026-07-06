@@ -1,1 +1,0 @@
-SELECT CustomerID, Name, Balance, IsVIP FROM Customers;

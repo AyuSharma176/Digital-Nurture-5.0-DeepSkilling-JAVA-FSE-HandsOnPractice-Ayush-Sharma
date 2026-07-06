@@ -1,1 +1,0 @@
-SELECT * FROM Loans WHERE LoanID = 2;
