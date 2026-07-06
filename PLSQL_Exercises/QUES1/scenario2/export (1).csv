@@ -1,0 +1,4 @@
+"CUSTOMERID","NAME","BALANCE","ISVIP"
+1,"John Doe",15000,"TRUE"
+2,"Jane Smith",1500,"FALSE"
+3,"Old Customer",2000,"FALSE"
