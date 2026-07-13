@@ -38,12 +38,7 @@ main
 │
 └── Week3_Assignment         (branch)
     └── spring-data-jpa-handson/orm-learn/
-        ├── Hands-on 1: HQL & JPQL Introduction
-        ├── Hands-on 2: Get All Permanent Employees (HQL + fetch)
-        ├── Hands-on 3: Fetch Quiz Attempt Details (HQL multi-join)
-        ├── Hands-on 4: Average Salary using HQL Aggregate
-        ├── Hands-on 5: Native Query
-        └── Hands-on 6: Criteria Query
+       
 ```
 
 ---
