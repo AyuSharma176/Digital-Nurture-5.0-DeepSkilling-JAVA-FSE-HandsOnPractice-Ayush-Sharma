@@ -37,14 +37,20 @@ main
 │       └── Ques9/LibraryManagement
 │
 └── Week3_Assignment         (branch)
-    └── spring-data-jpa-handson/orm-le...
+    └── spring-data-jpa-handson/orm-learn/
+        ├── Hands-on 1: HQL & JPQL Introduction
+        ├── Hands-on 2: Get All Permanent Employees (HQL + fetch)
+        ├── Hands-on 3: Fetch Quiz Attempt Details (HQL multi-join)
+        ├── Hands-on 4: Average Salary using HQL Aggregate
+        ├── Hands-on 5: Native Query
+        └── Hands-on 6: Criteria Query
 ```
 
 ---
 
 ## 📅 Weekly Breakdown
 
-### Week 1 — Engineering Concepts
+### Week 1 — Engineering Concepts ✅
 
 **Branch:** `Week1_Assignment`
 
@@ -73,7 +79,7 @@ Covers fundamental Java engineering concepts split into two categories:
 
 ---
 
-### Week 2 — Spring Core (Maven)
+### Week 2 — Spring Core (Maven) ✅
 
 **Branch:** `Week2_Assignment`
 
@@ -86,24 +92,58 @@ Topics include Spring beans, dependency injection, application context, and Mave
 
 ---
 
-### Week 3 — Spring Data JPA & ORM
+### Week 3 — Spring Data JPA & ORM ✅
 
 **Branch:** `Week3_Assignment`
 
-Hands-on practice with **Spring Data JPA** and Object-Relational Mapping (ORM).
+Hands-on practice with **Spring Data JPA**, Object-Relational Mapping (ORM), HQL, and Criteria Query.
 
-- `spring-data-jpa-handson/` — JPA repositories, entity mapping, and database interaction using Spring Boot
+Project: `spring-data-jpa-handson/orm-learn`
 
-Topics include JPA entities, repositories, JPQL queries, and ORM configuration.
+#### Hands-on Breakdown
+
+| # | Title | Key Concept |
+|---|---|---|
+| 1 | HQL & JPQL Introduction | Theory — HQL vs JPQL differences |
+| 2 | Get All Permanent Employees | `@Query` with HQL, `left join fetch` for single-query optimization |
+| 3 | Fetch Quiz Attempt Details | Multi-table HQL join across 6 tables (user, attempt, attempt_question, question, attempt_option, options) |
+| 4 | Average Salary by Department | HQL aggregate function `AVG()` with `@Param` binding |
+| 5 | Get All Employees (Native Query) | `nativeQuery = true` with raw SQL |
+| 6 | Criteria Query | Dynamic query building with `CriteriaBuilder`, `CriteriaQuery`, `Root`, `Predicate`, `TypedQuery` |
+
+#### Entities Created
+| Entity | Table |
+|---|---|
+| `Country` | `country` |
+| `Department` | `department` |
+| `Employee` | `employee` |
+| `Skill` | `skill` |
+| `Stock` | `stock` |
+| `User` | `user` |
+| `Question` | `question` |
+| `Options` | `options` |
+| `Attempt` | `attempt` |
+| `AttemptQuestion` | `attempt_question` |
+| `AttemptOption` | `attempt_option` |
+
+#### Key Takeaways
+- `join` links tables in HQL but does **not** populate Java beans
+- `join fetch` links tables **and** populates beans — results in a single optimized SQL query
+- Using `List` for multiple `fetch` joins causes `MultipleBagFetchException` — use `Set` instead
+- Bidirectional relationships require `@EqualsAndHashCode.Exclude` on back-references to prevent `StackOverflowError`
+- Native queries bypass HQL entirely and use raw SQL directly — useful but reduces DB portability
+- Criteria Query enables fully dynamic `WHERE` clauses built programmatically at runtime
 
 ---
 
 ## 🛠️ Technologies Used
 
-- **Language:** Java
-- **Frameworks:** Spring Core, Spring Data JPA, Spring Boot
+- **Language:** Java 25
+- **Frameworks:** Spring Core, Spring Data JPA, Spring Boot 4.1.0
 - **Build Tool:** Maven (including Maven Wrapper `mvnw`)
-- **ORM:** Hibernate / JPA
+- **ORM:** Hibernate 7.4.1 / JPA
+- **Database:** MySQL 8.0
+- **Libraries:** Lombok, HikariCP
 - **Version Control:** Git & GitHub
 
 ---
@@ -113,6 +153,7 @@ Topics include JPA entities, repositories, JPQL queries, and ORM configuration.
 ### Prerequisites
 - Java 17+
 - Maven 3.6+
+- MySQL 8.0+
 - IDE (IntelliJ IDEA / Eclipse / VS Code)
 
 ### Running a Project
@@ -137,6 +178,14 @@ Topics include JPA entities, repositories, JPQL queries, and ORM configuration.
    java -cp target/classes com.example.Main
    ```
 
+4. For Week 3 (Spring Data JPA), configure your database in `application.properties`:
+   ```properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/ormlearn
+   spring.datasource.username=your_username
+   spring.datasource.password=your_password
+   spring.jpa.hibernate.ddl-auto=validate
+   ```
+
 ---
 
 ## 👤 Author
@@ -155,3 +204,4 @@ GitHub: [@AyuSharma176](https://github.com/AyuSharma176)
 | Type | Deep Skilling — Hands-On Practice |
 | Branches | `Week1_Assignment`, `Week2_Assignment`, `Week3_Assignment` |
 | Total Commits | 10+ |
+| Status | Week 1 ✅ \| Week 2 ✅ \| Week 3 ✅ |
