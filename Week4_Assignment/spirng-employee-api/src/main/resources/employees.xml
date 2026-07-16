@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee id="1" name="Alice Johnson"  designation="Software Engineer"
+              department="Engineering" email="alice@company.com"  phone="9876543210"/>
+    <employee id="2" name="Bob Smith"      designation="Project Manager"
+              department="Management"   email="bob@company.com"    phone="9123456789"/>
+    <employee id="3" name="Carol Davis"    designation="UI/UX Designer"
+              department="Design"       email="carol@company.com"  phone="9988776655"/>
+    <employee id="4" name="David Lee"      designation="DevOps Engineer"
+              department="Operations"   email="david@company.com"  phone="9001122334"/>
+    <employee id="5" name="Eva Martin"     designation="QA Engineer"
+              department="Quality"      email="eva@company.com"    phone="9445566778"/>
+</employees>
