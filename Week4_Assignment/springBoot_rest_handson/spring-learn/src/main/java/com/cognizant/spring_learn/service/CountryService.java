@@ -9,10 +9,6 @@ import org.w3c.dom.Element;
 import com.cognizant.spring_learn.model.Country;
 import com.cognizant.spring_learn.service.exception.CountryNotFoundException;
 
-import jakarta.validation.Validation;
-import jakarta.validation.Validator;
-import jakarta.validation.ValidatorFactory;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -32,11 +28,9 @@ public class CountryService {
 	public void addCountry(String code, String name) throws Exception {
 	    File file = new File("src/main/resources/country.xml");
 
-        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-        Validator validator = factory.getValidator();
-
-	    DocumentBuilderFactory factory1 = DocumentBuilderFactory.newInstance();
-	    DocumentBuilder builder = factory1.newDocumentBuilder();
+	  
+	    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+	    DocumentBuilder builder = factory.newDocumentBuilder();
 	    Document doc = builder.parse(file);  // reads the XML file
 
 	    Element root = doc.getDocumentElement();

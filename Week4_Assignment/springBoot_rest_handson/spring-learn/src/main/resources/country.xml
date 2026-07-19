@@ -141,28 +141,4 @@
             
     
     
-    <bean class="com.cognizant.spring_learn.model.Country" id="countryNZ">
-                        
-        
-        <property name="code" value="NZ"/>
-                        
-        
-        <property name="name" value="NEWZEALAND"/>
-                    
-    
-    </bean>
-        
-    
-    <bean class="com.cognizant.spring_learn.model.Country" id="countryNZADF">
-                
-        <property name="code" value="NZADF"/>
-                
-        <property name="name" value="NEWZEALANDADS"/>
-            
-    </bean>
-    
-    <bean class="com.cognizant.spring_learn.model.Country" id="countryNZ">
-        <property name="code" value="NZ"/>
-        <property name="name" value="NEWZEALADFFNDADS"/>
-    </bean>
 </beans>
