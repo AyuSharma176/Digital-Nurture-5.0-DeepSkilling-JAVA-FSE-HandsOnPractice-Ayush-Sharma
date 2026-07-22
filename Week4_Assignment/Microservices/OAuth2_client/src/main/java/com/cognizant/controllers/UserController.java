@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UserController {
-    //Routes
-    @GetMapping("/user")
+    
+    @GetMapping("/user")//routes
     public Map<String, Object> user(@AuthenticationPrincipal OidcUser principal) {
         return Map.of(
             "name",  principal.getFullName(),
