@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Feedback</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 30px; background: #f9f9f9; }
+        .container { max-width: 550px; margin: auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        label { display: block; margin-top: 15px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 9px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        .msg { margin-top: 8px; font-size: 0.85em; color: #e74c3c; }
+        .fee-display { margin-top: 8px; font-weight: bold; color: #27ae60; }
+        #charCount { font-size: 0.85em; color: #555; margin-top: 5px; }
+        img { width: 100px; cursor: pointer; transition: width 0.3s; margin-top: 10px; border: 2px solid #003366; border-radius: 5px; }
+        button { margin-top: 20px; padding: 10px 25px; background: #003366; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Event Feedback Form</h2>
+
+        <!-- Phone with onblur validation -->
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" placeholder="10-digit number"
+               onblur="validatePhone(this)">
+        <span class="msg" id="phoneMsg"></span>
+
+        <!-- Dropdown with onchange -->
+        <label for="eventSelect">Select Event</label>
+        <select id="eventSelect" onchange="showFee(this)">
+            <option value="">-- Choose Event --</option>
+            <option value="500">Music Festival - ₹500</option>
+            <option value="300">Tech Talk - ₹300</option>
+            <option value="200">Food Fair - ₹200</option>
+        </select>
+        <div class="fee-display" id="feeDisplay"></div>
+
+        <!-- Image with ondblclick -->
+        <label>Event Image (double-click to enlarge)</label><br>
+        <img id="eventImg"
+             src="https://via.placeholder.com/100x80?text=Event"
+             alt="Event"
+             ondblclick="enlargeImage(this)">
+
+        <!-- Feedback textarea with key events -->
+        <label for="feedback">Your Feedback</label>
+        <textarea id="feedback" rows="4"
+                  placeholder="Write your feedback..."
+                  onkeyup="countChars(this)"></textarea>
+        <div id="charCount">Characters: 0</div>
+
+        <!-- Submit with onclick -->
+        <button onclick="confirmSubmit()">Submit Feedback</button>
+    </div>
+
+    <script>
+        function validatePhone(input) {
+            const msg = document.getElementById('phoneMsg');
+            msg.textContent = /^\d{10}$/.test(input.value)
+                ? '' : 'Please enter a valid 10-digit phone number.';
+        }
+
+        function showFee(select) {
+            const fee = select.value;
+            document.getElementById('feeDisplay').textContent =
+                fee ? `Registration Fee: ₹${fee}` : '';
+        }
+
+        function enlargeImage(img) {
+            img.style.width = img.style.width === '250px' ? '100px' : '250px';
+        }
+
+        function countChars(textarea) {
+            document.getElementById('charCount').textContent =
+                `Characters: ${textarea.value.length}`;
+        }
+
+        function confirmSubmit() {
+            alert('✅ Your feedback has been submitted. Thank you!');
+        }
+
+        window.onbeforeunload = function () {
+            const feedback = document.getElementById('feedback').value;
+            if (feedback.trim()) return 'You have unsaved feedback. Are you sure you want to leave?';
+        };
+    </script>
+
+</body>
+</html>
