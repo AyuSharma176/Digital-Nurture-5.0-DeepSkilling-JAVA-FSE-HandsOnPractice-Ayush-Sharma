@@ -5,40 +5,47 @@
 
 ## 📋 Overview
 
-This repository contains all hands-on practice assignments completed as part of the **Digital Nurture 5.0 Deep Skilling Program** for Java Full Stack Engineering. The work is organized week-wise across dedicated branches, covering core engineering concepts, design patterns, algorithms, data structures, and Spring-based backend development.
+This repository contains all hands-on practice assignments completed as part of the **Digital Nurture 5.0 Deep Skilling Program** for Java Full Stack Engineering. The work covers core engineering concepts, design patterns, algorithms, data structures, Spring backend, REST APIs, microservices, PL/SQL, testing frameworks, and frontend development with React and Angular.
 
 ---
 
 ## 🗂️ Repository Structure
 
 ```
-main
-├── Week1_Assignment         (branch)
-│   └── Engineering concepts/
-│       ├── Algorithms_Data Structures/
-│       │   ├── EcommerceSearchExample
-│       │   ├── EmployeeManagementSystem
-│       │   ├── FinancialForecasting
-│       │   ├── InventoryManagementSystem
-│       │   ├── LibraryManagementSystem
-│       │   ├── SortingCustomerOrders
-│       │   └── TaskManagementSystem
-│       └── DesignPatternandPrinciples/
-│           ├── AdapterPatternExample
-│           ├── BuilderPatternExample
-│           ├── CommandPatternExample
-│           ├── DecoratorPatternExample
-│           ├── DependencyInjectionExample
-│           └── FactoryMethodPatternExample
-│
-├── Week2_Assignment         (branch)
-│   └── spring-core-maven/
-│       ├── Ques1-8/LibraryManagement
-│       └── Ques9/LibraryManagement
-│
-└── Week3_Assignment         (branch)
-    └── spring-data-jpa-handson/orm-learn/
-       
+root/
+├── Engineering concepts/
+│   ├── Algorithms_Data Structures/
+│   │   ├── EcommerceSearchExample
+│   │   ├── EmployeeManagementSystem
+│   │   ├── FinancialForecasting
+│   │   ├── InventoryManagementSystem
+│   │   ├── LibraryManagementSystem
+│   │   ├── SortingCustomerOrders
+│   │   └── TaskManagementSystem
+│   └── DesignPatternandPrinciples/
+│       ├── AdapterPatternExample
+│       ├── BuilderPatternExample
+│       ├── CommandPatternExample
+│       ├── DecoratorPatternExample
+│       ├── DependencyInjectionExample
+│       └── FactoryMethodPatternExample
+├── spring-core-maven/
+│   ├── Ques1-8/LibraryManagement
+│   └── Ques9/LibraryManagement
+├── spring-data-jpa-handson/
+│   └── orm-learn/
+├── spring-rest-handson/
+├── Microservices/
+├── PLSQLProgramming/
+├── JUnit, Mockito and SL4J/
+│   └── junit-mockito-practice/
+├── React/
+├── Angular/
+│   └── student-course-portal/
+├── GIT/
+├── upskilling/
+├── .gitignore
+└── Readme.md
 ```
 
 ---
@@ -47,11 +54,12 @@ main
 
 ### Week 1 — Engineering Concepts ✅
 
-**Branch:** `Week1_Assignment`
+**Folder:** `Engineering concepts/`
 
 Covers fundamental Java engineering concepts split into two categories:
 
 #### Algorithms & Data Structures
+
 | Project | Description |
 |---|---|
 | `EcommerceSearchExample` | Search algorithms applied to e-commerce product lookup |
@@ -63,6 +71,7 @@ Covers fundamental Java engineering concepts split into two categories:
 | `TaskManagementSystem` | Task scheduling and priority queue implementation |
 
 #### Design Patterns & Principles
+
 | Pattern | Description |
 |---|---|
 | `AdapterPatternExample` | Structural pattern for interface compatibility |
@@ -76,7 +85,7 @@ Covers fundamental Java engineering concepts split into two categories:
 
 ### Week 2 — Spring Core (Maven) ✅
 
-**Branch:** `Week2_Assignment`
+**Folder:** `spring-core-maven/`
 
 Hands-on practice with the **Spring Core framework** using Maven as the build tool.
 
@@ -89,7 +98,7 @@ Topics include Spring beans, dependency injection, application context, and Mave
 
 ### Week 3 — Spring Data JPA & ORM ✅
 
-**Branch:** `Week3_Assignment`
+**Folder:** `spring-data-jpa-handson/`
 
 Hands-on practice with **Spring Data JPA**, Object-Relational Mapping (ORM), HQL, and Criteria Query.
 
@@ -107,6 +116,7 @@ Project: `spring-data-jpa-handson/orm-learn`
 | 6 | Criteria Query | Dynamic query building with `CriteriaBuilder`, `CriteriaQuery`, `Root`, `Predicate`, `TypedQuery` |
 
 #### Entities Created
+
 | Entity | Table |
 |---|---|
 | `Country` | `country` |
@@ -131,13 +141,84 @@ Project: `spring-data-jpa-handson/orm-learn`
 
 ---
 
+### Week 4 — Spring REST ✅
+
+**Folder:** `spring-rest-handson/`
+
+Hands-on practice building **RESTful APIs** using Spring Boot.
+
+Topics include:
+- REST controllers with `@RestController`, `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`
+- Path variables and request params with `@PathVariable`, `@RequestParam`
+- Request/response body handling with `@RequestBody`
+- Global exception handling with `@ControllerAdvice` and `@ExceptionHandler`
+- HTTP status codes and `ResponseEntity`
+
+---
+
+### Week 5 — Microservices ✅
+
+**Folder:** `Microservices/`
+
+Hands-on practice with **Microservices Architecture** using Spring Cloud.
+
+Topics include:
+- Microservices design principles and patterns
+- Eureka Service Registry and Discovery
+- Spring Cloud API Gateway
+- Inter-service REST communication with `RestTemplate` / `WebClient`
+- Centralized configuration
+
+---
+
+### Week 6 — PL/SQL Programming ✅
+**Folder:** `React/`
+
+Hands-on practice building **frontend applications** with React.
+
+Topics include:
+- Functional components and JSX
+- `useState` and `useEffect` hooks
+- Props and component composition
+- Conditional rendering and lists
+- API integration with `fetch` / `axios`
+
+**Folder:** `PLSQLProgramming/`
+
+Hands-on practice with **Oracle PL/SQL** for database-side programming.
+
+Topics include:
+- Anonymous and named PL/SQL blocks
+- Stored procedures and functions
+- Implicit and explicit cursors
+- Triggers (BEFORE / AFTER)
+- Exception handling in PL/SQL
+
+---
+
+### Week 7 — JUnit, Mockito & SLF4J ✅
+
+**Folder:** `JUnit, Mockito and SL4J/junit-mockito-practice/`
+
+Hands-on practice with **unit testing and logging** in Java.
+
+Topics include:
+- Writing unit tests with **JUnit 5** (`@Test`, `@BeforeEach`, `@AfterEach`, assertions)
+- Mocking dependencies with **Mockito** (`@Mock`, `@InjectMocks`, `when()`, `verify()`, `ArgumentCaptor`)
+- Logging with **SLF4J** and Logback
+
+---
+
 ## 🛠️ Technologies Used
 
-- **Language:** Java 25
-- **Frameworks:** Spring Core, Spring Data JPA, Spring Boot 4.1.0
+- **Language:** Java 17+
+- **Frameworks:** Spring Core, Spring Data JPA, Spring Boot, Spring REST, Spring Cloud
+- **Frontend:** React, Angular
+- **Database:** MySQL 8.0, Oracle (PL/SQL)
+- **ORM:** Hibernate / JPA
 - **Build Tool:** Maven (including Maven Wrapper `mvnw`)
-- **ORM:** Hibernate 7.4.1 / JPA
-- **Database:** MySQL 8.0
+- **Testing:** JUnit 5, Mockito
+- **Logging:** SLF4J, Logback
 - **Libraries:** Lombok, HikariCP
 - **Version Control:** Git & GitHub
 
@@ -148,38 +229,49 @@ Project: `spring-data-jpa-handson/orm-learn`
 ### Prerequisites
 - Java 17+
 - Maven 3.6+
-- MySQL 8.0+
+- MySQL 8.0+ / Oracle DB (for PL/SQL)
+- Node.js & npm (for React & Angular)
 - IDE (IntelliJ IDEA / Eclipse / VS Code)
 
-### Running a Project
+### Clone the Repository
 
-1. Clone the repository and switch to the relevant branch:
-   ```bash
-   git clone https://github.com/AyuSharma176/Digital-Nurture-5.0-DeepSkilling-JAVA-FSE-HandsOnPractice-Ayush-Sharma.git
-   cd Digital-Nurture-5.0-DeepSkilling-JAVA-FSE-HandsOnPractice-Ayush-Sharma
-   git checkout Week1_Assignment   # or Week2_Assignment / Week3_Assignment
-   ```
+```bash
+git clone https://github.com/AyuSharma176/Digital-Nurture-5.0-DeepSkilling-JAVA-FSE-HandsOnPractice-Ayush-Sharma.git
+cd Digital-Nurture-5.0-DeepSkilling-JAVA-FSE-HandsOnPractice-Ayush-Sharma
+```
 
-2. Navigate to the project folder and build:
-   ```bash
-   cd "Engineering concepts/Algorithms_Data Structures/LibraryManagementSystem"
-   mvn clean install
-   ```
+### Run a Spring Project
 
-3. Run the application:
-   ```bash
-   mvn spring-boot:run
-   # or for plain Java projects:
-   java -cp target/classes com.example.Main
-   ```
+```bash
+cd spring-rest-handson
+mvn clean install
+mvn spring-boot:run
+```
 
-4. For Week 3 (Spring Data JPA), configure your database in `application.properties`:
-   ```properties
-   spring.datasource.url=jdbc:mysql://localhost:3306/ormlearn
-   spring.datasource.username=your_username
-   spring.datasource.password=your_password
-   spring.jpa.hibernate.ddl-auto=validate
-   ```
+### Run React App
+
+```bash
+cd React
+npm install
+npm start
+```
+
+### Run Angular App
+
+```bash
+cd Angular/student-course-portal
+npm install
+ng serve
+```
+
+### Database Config (Spring JPA/REST projects)
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/ormlearn
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=validate
+```
 
 ---
 
@@ -197,6 +289,5 @@ GitHub: [@AyuSharma176](https://github.com/AyuSharma176)
 | Program | Digital Nurture 5.0 |
 | Track | Java Full Stack Engineering (FSE) |
 | Type | Deep Skilling — Hands-On Practice |
-| Branches | `Week1_Assignment`, `Week2_Assignment`, `Week3_Assignment` |
-| Total Commits | 10+ |
-| Status | Week 1 ✅ \| Week 2 ✅ \| Week 3 ✅ |
+| Total Commits | 59+ |
+| Status | Week 1 ✅ \| Week 2 ✅ \| Week 3 ✅ \| Week 4 ✅ \| Week 5 ✅ \| Week 6 ✅ \| Week 7 ✅|
